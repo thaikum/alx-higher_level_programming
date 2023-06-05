@@ -37,10 +37,10 @@ int check_cycle(listint_t *list)
 		{
 			if (head->next)
 			{
-				if (head == head->next)
+				if (head->next->n == 0x1000000)
 					return (1);
-				else if (check_exists(list, head->next, head))
-					return (1);
+
+				head->next->n = 0x1000000;
 			}
 			else
 				return (0);
