@@ -59,12 +59,19 @@ void free_listint(listint_t *head)
 		free(current);
 	}
 }
-
-int check_exists(listint_t *list, listint_t *test)
+/**
+ * check_exists - checks if a node exists in a linked list
+ * @list: the list head
+ * @test: te node to check
+ * @terminal: where to stop looping
+ *
+ * Return: 1 if found or 0 if not
+ */
+int check_exists(listint_t *list, listint_t *test, listint_t *terminal)
 {
 	listint_t *head;
 
-	if (head = list; head; head = head->next)
+	for (head = list; head && head != terminal; head = head->next)
 		if (head == test)
 			return (1);
 	return (0);
@@ -79,11 +86,9 @@ int check_exists(listint_t *list, listint_t *test)
 int check_cycle(listint_t *list)
 {
 	int x;
-	listint_t *head = list, *hist_head = NULL;
+	listint_t *head = list;
 
-	items[0] = NULL;
-
-	if (!head || !items)
+	if (!head)
 	{
 		return (0);
 	}
@@ -93,14 +98,10 @@ int check_cycle(listint_t *list)
 		{
 			if (head->next)
 			{
-				if (check_cycle(hist_head, head->next))
-				{
-					free_listint(list);
-					free_listint(hist_head);
+				if (head == head->next)
 					return (1);
-				}
-				hist_head = add_nodeint(hist_head, head->n)
-				return ();
+				else if (check_exists(list, head->next, head))
+					return (1);
 			}
 			else
 				return (0);
