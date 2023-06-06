@@ -1,0 +1,5 @@
+x = ''
+for one in range(97, 123):
+    x += chr(one)
+
+print(x)

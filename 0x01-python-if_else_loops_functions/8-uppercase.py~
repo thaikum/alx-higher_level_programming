@@ -1,0 +1,8 @@
+def uppercase(str):
+    str_upper = ''
+    for x in str:
+        if ord(x) not in range(65, 91):
+            str_upper += f"{chr(ord(x) - 32)}"
+        else:
+            str_upper += x
+    print(f"{str_upper}")
