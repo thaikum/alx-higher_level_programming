@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-exec("#pythoniscool\n")
+_ = open(1, 'w').write("#pythoniscool\n")
