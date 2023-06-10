@@ -3,9 +3,8 @@ if __name__ == "__main__":
     from calculator_1 import add, sub, mul, div
     a = 10
     b = 5
-    functs = (add, sub, mul, div)
-    signs = ('+','-','*','*','/')
-    counter = 0
-    for fun in functs:
-        print("{} {} {} = {}".format(a, signs[counter], b, fun(a, b)))
-        counter += 1
+
+    print("{} + {} = {}".format(a, b, add(a, b)))
+    print("{} - {} = {}".format(a, b, sub(a, b)))
+    print("{} * {} = {}".format(a, b, mul(a, b)))
+    print("{} / {} = {}".format(a, b, div(a, b)))
