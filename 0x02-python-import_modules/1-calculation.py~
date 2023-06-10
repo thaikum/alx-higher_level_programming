@@ -1,0 +1,11 @@
+#!/usr/bin/python3
+if __name__ == "__main__":
+    from calculator_1 import add, sub, mul, div
+    a = 10
+    b = 5
+    functs = [add, sub, mul, div]
+    signs = ['+','-','*','*','/']
+    counter = 0
+    for fun in functs:
+        print("{} {} {} = {}".format(a, signs[counter], fun(a, b)))
+        counter += 1
