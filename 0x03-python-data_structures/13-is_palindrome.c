@@ -11,10 +11,28 @@ double_s *add_double_node(int n, double_s *tail)
 		exit(98);
 	new_tail->n = n;
 	new_tail->prev = tail;
+	new_tail->next = NULL;
 
 	if (tail)
 		tail->next = new_tail;
 	return (new_tail);
+}
+
+/**
+ * free_double - frees the doubly linked list
+ * @head: the list to free
+ */
+void free_double(double_s *head)
+{
+	double_s *temp;
+
+	if (head != NULL)
+	{
+		temp = head;
+		head = head->next;
+		free(temp);
+		temp = NULL;
+	}
 }
 
 /**
@@ -53,13 +71,17 @@ int is_palindrome(listint_t **head)
 {
 	listint_t *cur_head = *head;
 	double_s *new_head, *new_tail;
+	int result;
 
 	if (!(*head) || (*head)->next == NULL)
 		return (1);
+
 	new_tail = new_head = add_double_node((*head)->n, NULL);
 	cur_head = cur_head->next;
 	for(;cur_head; cur_head = cur_head->next)
 		new_tail = add_double_node(cur_head->n, new_tail);
 
-	return (check_palindrome(new_head, new_tail));
+	result = (check_palindrome(new_head, new_tail));
+	free_double(new_head);
+	return (result);
 }
