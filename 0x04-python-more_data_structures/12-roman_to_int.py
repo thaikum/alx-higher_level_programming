@@ -1,6 +1,7 @@
 #!/usr/bin/python3
 def roman_to_int(roman_string):
     try:
+        roman_string = roman_string.upper()
         romans = {
             "I": 1,
             "V": 5,
@@ -11,7 +12,7 @@ def roman_to_int(roman_string):
             "M": 1000
         }
 
-        decimal = 0;
+        decimal = 0
 
         for ind, char in enumerate(roman_string):
             if (ind < len(roman_string) - 1):
@@ -21,5 +22,5 @@ def roman_to_int(roman_string):
             decimal += romans[char]
 
         return decimal
-    except:
+    except Exception as e:
         return None
