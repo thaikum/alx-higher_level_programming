@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+Square and area
+"""
+
+
 class Square:
+    """
+    square, area, size and
+    printing of the square
+    """
+
     def __init__(self, size=0):
         self.size = size
 

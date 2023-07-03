@@ -1,5 +1,15 @@
 #!/usr/bin/python3
+"""
+Square and printing
+"""
+
+
 class Square:
+    """
+    initialization, area as well as
+    printing the square with offset
+    """
+
     def __init__(self, size=0, position=(0, 0)):
         self.size = size
         self.position = position
