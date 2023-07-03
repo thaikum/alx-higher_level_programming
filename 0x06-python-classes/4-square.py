@@ -1,5 +1,13 @@
 #!/usr/bin/python3
+"""
+Square class
+"""
 class Square:
+    """
+    initialization area calculation and use of getters
+    and setters
+    """
+    
     def __init__(self, size=0):
         self.size = size
 
