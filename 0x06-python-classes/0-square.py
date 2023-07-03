@@ -5,6 +5,8 @@
     Author: Fredrick Thaiku
     Version: 1.0
 """
+
+
 class Square:
     """
     This module declares an emty class square
