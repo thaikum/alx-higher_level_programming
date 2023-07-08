@@ -29,3 +29,8 @@ TypeError: a must be an integer
 Traceback (most recent call last):
 ...
 TypeError: b must be an integer
+7. Testing very large float
+>>> add_integer(1.0e9000, 1.0e10000)
+Traceback (most recent call last):
+...
+OverflowError: cannot convert float infinity to integer
