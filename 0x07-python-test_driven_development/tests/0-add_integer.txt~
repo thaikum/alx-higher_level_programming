@@ -1,0 +1,30 @@
+These are the tests for two numbers addition
+>>> import sys
+>>> sys.path.append("../.")
+>>> add_integer = __import__('0-add_integer').add_integer
+
+1. Testing successful addition
+>>> add_integer(2, 3)
+5
+
+2. Testing addition of negative numbers
+>>> add_integer(100, -2)
+98
+
+3. Testing only a inputed
+>>> add_integer(2)
+
+4. Testing floating point
+>>> add_integer(100.3, -2)
+98
+
+5. Testing invalid a
+>>> add_integer('h')
+Traceback (most recent call last):
+...
+TypeError: a must be an integer
+
+6. Testing invalid b
+Traceback (most recent call last):
+...
+TypeError: b must be an integer
