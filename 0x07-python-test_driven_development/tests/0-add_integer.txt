@@ -34,3 +34,9 @@ TypeError: b must be an integer
 Traceback (most recent call last):
 ...
 OverflowError: cannot convert float infinity to integer
+8. Testing a nan float
+>>> k = float('nan')
+>>> add_integer(k)
+Traceback (most recent call last):
+...
+ValueError: cannot convert float NaN to integer
