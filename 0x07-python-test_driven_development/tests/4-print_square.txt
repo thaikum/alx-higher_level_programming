@@ -1,0 +1,30 @@
+Testing print square
+
+>>> import sys
+>>> sys.path.append("../.")
+>>> print_square = __import__('4-print_square').print_square
+
+1. Testing for a valid number
+>>> print_square(4)
+####
+####
+####
+####
+
+2. Number less than 0
+>>> print_square(-1)
+Traceback (most recent call last):
+...
+ValueError: size must be >= 0
+
+3. Float test
+>>> print_square(4.5)
+Traceback (most recent call last):
+...
+TypeError: size must be an integer
+
+4. Invalid arguments
+>>> print_square()
+Traceback (most recent call last):
+...
+TypeError: print_square() missing 1 required positional argument: 'size'
