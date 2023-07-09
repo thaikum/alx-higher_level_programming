@@ -15,6 +15,7 @@ class Rectangle:
         self.width = width
         self.height = height
         Rectangle.number_of_instances += 1
+        self.print_symbol = "#"
 
     @property
     def width(self):
@@ -55,7 +56,7 @@ class Rectangle:
             out = ''
             for x in range(self.height):
                 for y in range(self.width):
-                    out += f"{Rectangle.print_symbol}"
+                    out += f"{self.print_symbol}"
                 if (x != self.height - 1):
                     out += "\n"
 
