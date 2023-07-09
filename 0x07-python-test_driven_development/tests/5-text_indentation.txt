@@ -1,0 +1,29 @@
+Testing print square
+
+>>> import sys
+>>> sys.path.append("../.")
+>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+1. Test for a normal string with .
+>>> text_indentation("Hello. World.")
+Hello.
+
+World.
+
+
+2. Test non string
+>>> text_indentation(98)
+Traceback (most recent call last):
+...
+TypeError: text must be a string
+
+3. No variable
+Traceback (most recent call last):
+...
+TypeError: text_indentation() missing 1 required positional argument: 'text'
+
+4. None as string
+>>> text_indentation(None)
+Traceback (most recent call last):
+...
+TypeError: text must be a string

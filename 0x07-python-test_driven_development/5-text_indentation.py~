@@ -1,0 +1,18 @@
+#!/usr/bin/python3
+
+"""
+This module prints a new line whenever it encounters .?:
+"""
+
+
+def text_indentation(text):
+    """
+    this function prints line with new line
+    """
+    if not isinstance(text, str):
+        raise TypeError("text must be a string")
+    for letter in text:
+        if letter not in '.?:':
+            print(letter, end='')
+        else:
+            print(f"{letter}\n")
