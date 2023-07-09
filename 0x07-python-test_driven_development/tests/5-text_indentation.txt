@@ -7,8 +7,9 @@ Testing print square
 1. Test for a normal string with .
 >>> text_indentation("Hello. World.")
 Hello.
-
+<BLANKLINE>
 World.
+<BLANKLINE>
 
 
 2. Test non string

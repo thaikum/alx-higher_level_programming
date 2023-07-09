@@ -13,12 +13,13 @@ def text_indentation(text):
         raise TypeError("text must be a string")
     endLine = False
     for letter in text:
-        if endLine:
-            endLine = False
-            print("\n")
+        if endLine and letter == ' ':
             continue
 
         if letter in ".?:":
             endLine = True
+            print(f"{letter}\n")
+            continue
 
         print(letter, end='')
+        endLine = False
