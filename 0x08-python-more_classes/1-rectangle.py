@@ -8,6 +8,7 @@ class Rectangle:
     """
     This class defines an emtpy rectangle
     """
+
     def __init__(self, width=0, height=0):
         self.width = width
         self.height = height
@@ -27,6 +28,7 @@ class Rectangle:
     @property
     def height(self):
         return self.__height
+
     @height.setter
     def height(self, value):
         if not isinstance(value, int):
