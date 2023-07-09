@@ -53,6 +53,7 @@ class Rectangle:
             for x in range(self.height):
                 for y in range(self.width):
                     out += "#"
-                out += "\n"
+                if (x != self.height - 1):
+                    out += "\n"
 
             return out
