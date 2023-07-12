@@ -1,0 +1,5 @@
+>>> bs.integer_validator("value", None)
+Traceback (most recent call last):
+...
+TypeError: value must be an integer
+65;6800;1c
