@@ -9,7 +9,7 @@ Testing my list
 >>> m_list.append(1)
 >>> m_list.append(2)
 >>> m_list.print_sorted()
-[2, 1]
+[1, 2]
 
 2. Empty list
 >>> my_list = MyList()
@@ -19,7 +19,7 @@ Testing my list
 3. String value
 >>> my_list = MyList("hello")
 >>> my_list.print_sorted()
-['o', 'l', 'l', 'h', 'e']
+['e', 'h', 'l', 'l', 'o']
 
 4. None value
 >>> my_list = MyList(None)
