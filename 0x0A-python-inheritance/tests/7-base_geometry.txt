@@ -1,0 +1,35 @@
+Testing the BaseGeometry
+
+>>> import sys
+>>> sys.path.append("../.")
+>>> BaseGeometry = __import__('7-base_geometry').BaseGeometry
+>>> bs = BaseGeometry()
+
+1. Test normal correct number
+bs.integer_validator("value", 7)
+
+2. Test invalid integer
+>>> bs.integer_validator("value", "h")
+Traceback (most recent call last):
+...
+TypeError: value must be an integer
+
+3. Test for integer < 0
+>>> bs.integer_validator("value", -1)
+Traceback (most recent call last):
+...
+ValueError: value must be greater than 0
+
+4. Test if integer is not provided
+Traceback (most recent call last):
+...
+TypeError: integer_validator() missing 1 required positional argument: 'value'
+
+5. Test for a very big integer
+>>> bs.integer_validator("value", 1e10000000000)
+Traceback (most recent call last):
+...
+TypeError: value must be an integer
+
+
+
