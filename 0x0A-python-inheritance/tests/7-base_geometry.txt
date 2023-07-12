@@ -31,5 +31,8 @@ Traceback (most recent call last):
 ...
 TypeError: value must be an integer
 
-
-
+6. When value is None
+>>> bs.integer_validator("value", None)
+Traceback (most recent call last):
+...
+TypeError: value must be an integer
