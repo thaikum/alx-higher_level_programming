@@ -10,7 +10,7 @@ def pascal_triangle(n):
     pascal triangle
     """
     def f(x):
-        y = 1;
+        y = 1
         for k in range(1, x + 1):
             y *= k
 
