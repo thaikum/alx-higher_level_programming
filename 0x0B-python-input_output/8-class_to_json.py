@@ -14,4 +14,4 @@ def class_to_json(obj):
         value = getattr(obj, attr)
         if isinstance(value, (list, dict, str, int, bool)):
             attributes[attr] = value
-    return str(attributes)
+    return attributes
