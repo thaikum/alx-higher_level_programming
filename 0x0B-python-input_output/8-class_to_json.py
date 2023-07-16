@@ -8,6 +8,7 @@ import json
 def class_to_json(obj):
     """
     class to json
+    convers a class to a json
     """
     attributes = {}
     for attr in obj.__dict__:
